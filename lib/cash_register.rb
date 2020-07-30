@@ -21,7 +21,7 @@ class CashRegister
    end
    floatedDiscount = @discount.to_f
    floatedDiscount /= 100
-   floatedDiscount *= @total
+   floatedDiscount
     return "After the discount, the total comes to $#{floatedDiscount}"
 
   end
