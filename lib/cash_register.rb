@@ -1,7 +1,7 @@
 class CashRegister
 
-  def initialize
-
+  def initialize(cart)
+    @cart = cart
   end
 
   def total
