@@ -17,6 +17,7 @@ class CashRegister
     @cart << item
     count += 1
   end
+  end
 
   def apply_discount
    if !@discount
