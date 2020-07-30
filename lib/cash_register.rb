@@ -20,7 +20,7 @@ class CashRegister
      return "There is no discount to apply."
    end
     percent @discount.to_f / 100
-    
+
     return "After the discount, the total comes to $#{floatDis}"
   end
 
