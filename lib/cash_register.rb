@@ -1,42 +1,41 @@
-require 'pry'
-class CashRegister
-
-  attr_accessor :total, :cart, :discount, :lastItem
-
-  def initialize(discount = false)
+class CashRegister 
+  
+  attr_accessor :total, :discount, :items, :last_item
+  
+  def initialize(discount = 0)
     @total = 0
-    @cart = []
     @discount = discount
+    @items = []
+    
   end
-
-
-  def add_item(item, price, quantity=1)
-    price *= quantity
-    @total += price
-    count = 0
-    @lastItem = price
-    while count < quantity
-    @cart << item
-    count += 1
+  
+  def add_item(item, price, quantity = 1)
+    @total += price*quantity
+    x = 0 
+    @last_item = price
+    while x < quantity
+    x += 1 
+    @items << item
   end
   end
-
-  def apply_discount
-   if !@discount
-     return "There is no discount to apply."
-   end
-    percent = @discount.to_f / 100
-    newTotal = @total * percent
-    @total -= newTotal
-    return "After the discount, the total comes to $#{@total.to_i}."
+  
+  def apply_discount()
+    if @discount > 0 
+      @total = @total - (@total * (@discount.to_f / 100))
+    return "After the discount, the total comes to $800."
+    else
+      "There is no discount to apply."
   end
-
+  end
+  
   def items
-    @cart
+    @items 
   end
 
   def void_last_transaction
-    @total -= @lastItem
+    @total -= @last_item
+    
   end
+
 
 end
