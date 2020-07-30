@@ -2,7 +2,7 @@ class CashRegister
 
   attr_accessor :total, :cart, :discount
 
-  def initialize(discount = 0)
+  def initialize(discount = false)
     @total = 0
     @cart = []
     @discount = discount
@@ -16,7 +16,7 @@ class CashRegister
   end
 
   def apply_discount
-   if @discount == 0
+   if !@discount
      return "There is no discount to apply."
    end
     percent = @discount.to_f / 100
