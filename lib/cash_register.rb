@@ -14,7 +14,7 @@ class CashRegister
     price *= quantity
     @total += price
     count = 0
-    @test += price
+    @test = price
     while count < quantity
     @cart << item
     count += 1
@@ -36,7 +36,7 @@ class CashRegister
   end
 
   def void_last_transaction
-    @total - @test
+    @total =- @test
   end
 
 end
