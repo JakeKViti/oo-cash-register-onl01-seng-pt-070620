@@ -20,9 +20,7 @@ class CashRegister
      return "There is no discount to apply."
    end
     percent = @discount.to_f / 100
-    @total *= percent
-    newTotal = @total.to_i
-    @total = newTotal
+    newTotal = @total * percent
     return "After the discount, the total comes to $#{newTotal}"
   end
 
