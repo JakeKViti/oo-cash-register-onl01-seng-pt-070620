@@ -26,7 +26,7 @@ class CashRegister
   end
 
   def items
-    return @cart[0]
+    items = [@cart[0], @cart[1], @cart[1], @cart[1]]
   end
 
   def void_last_transaction
