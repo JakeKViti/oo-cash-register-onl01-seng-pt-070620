@@ -20,7 +20,7 @@ class CashRegister
      return "There is no discount to apply."
    end
    floatedDiscount = @discount.to_f
-    return "After the discount, the total comes to $#{@discount}"
+    return "After the discount, the total comes to $#{floatedDiscount}"
 
   end
 
