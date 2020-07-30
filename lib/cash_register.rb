@@ -19,9 +19,9 @@ class CashRegister
    if !@discount
      return "There is no discount to apply."
    end
-    return percent = @discount.to_f / 100
-
-  #  return "After the discount, the total comes to $#{floatDis}"
+    percent = @discount.to_f / 100
+    @total *= percent
+    return "After the discount, the total comes to $#{@total}"
   end
 
   def items
