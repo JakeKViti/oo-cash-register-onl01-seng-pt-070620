@@ -19,7 +19,8 @@ class CashRegister
    if !@discount
      return "There is no discount to apply."
    end
-    return  @discount.to_f
+    percent @discount.to_f / 100
+    
     return "After the discount, the total comes to $#{floatDis}"
   end
 
