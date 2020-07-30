@@ -22,7 +22,7 @@ class CashRegister
    if !@discount
      return "There is no discount to apply."
    end
-   @total *= @discount
+   @total /= @discount
     return "After the discount, the total comes to $#{total}"
 
   end
