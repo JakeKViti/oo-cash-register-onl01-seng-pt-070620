@@ -19,8 +19,8 @@ class CashRegister
    if !@discount
      return "There is no discount to apply."
    end
-    @discount.to_f
-    return "After the discount, the total comes to $#{@discount}"
+    floatDis = @discount.to_f
+    return "After the discount, the total comes to $#{floatDis}"
   end
 
   def items
