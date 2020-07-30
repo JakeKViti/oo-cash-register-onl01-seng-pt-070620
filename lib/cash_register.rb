@@ -1,7 +1,7 @@
 class CashRegister
 
-  def initialize(total)
-    @total = total
+  def initialize(cash_register)
+    @cash_register = cash_register
   end
 
   def total
