@@ -22,10 +22,12 @@ class CashRegister
    if @discount = 0
      return "There is no discount to apply."
    end
+
+
   end
 
   def items
-    @cart
+    @cart.uniq
   end
 
   def void_last_transaction
