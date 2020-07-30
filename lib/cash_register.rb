@@ -14,7 +14,7 @@ class CashRegister
 
   def add_item(item, price, quantity=1)
     @cart << item
-    Finalprice = price * quantity 
+    Finalprice = price * quantity
     @total = Finalprice
   end
 
