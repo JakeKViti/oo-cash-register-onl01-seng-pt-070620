@@ -21,8 +21,8 @@ class CashRegister
    end
     percent = @discount.to_f / 100
     @total *= percent
-    @total.to_i
-    return "After the discount, the total comes to $#{@total}"
+    newTotal = @total.to_i
+    return "After the discount, the total comes to $#{newTotal}"
   end
 
   def items
