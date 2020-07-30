@@ -14,7 +14,7 @@ class CashRegister
     price *= quantity
     @total += price
     count = 0
-    @last = price
+    @test = price
     while count < quantity
     @cart << item
     count += 1
