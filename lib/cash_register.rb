@@ -21,6 +21,7 @@ class CashRegister
    end
     percent = @discount.to_f / 100
     newTotal = @total * percent
+    return newTotal
     return "After the discount, the total comes to $#{newTotal}"
   end
 
