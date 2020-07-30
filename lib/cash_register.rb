@@ -13,7 +13,7 @@ class CashRegister
   end
 
   def add_item(item, price)
-    item << @cart
+    @cart << item
     return @cart
   end
 
