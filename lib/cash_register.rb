@@ -19,7 +19,7 @@ class CashRegister
    if !@discount
      return "There is no discount to apply."
    end
-    floatDis = @discount.to_f
+    return  @discount.to_f
     return "After the discount, the total comes to $#{floatDis}"
   end
 
