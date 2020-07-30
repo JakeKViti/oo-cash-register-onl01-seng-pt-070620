@@ -19,7 +19,9 @@ class CashRegister
   end
 
   def apply_discount
-   return @discount
+   if @discount = 0
+     return "There is no discount to apply"
+   end
   end
 
   def items
