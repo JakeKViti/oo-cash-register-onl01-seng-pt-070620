@@ -1,3 +1,4 @@
+require pry
 class CashRegister
 
   attr_accessor :total, :cart, :discount
@@ -35,7 +36,7 @@ class CashRegister
 
   def void_last_transaction
     @cart.pop
-    return @cart
+
   end
 
 end
